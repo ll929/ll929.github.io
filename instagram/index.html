@@ -22,7 +22,8 @@
   
     <link rel="icon" href="http://blogsource7.hope13.com/image/user.jpg">
   
-  <link rel="stylesheet" href="http://blogsource7.hope13.com/css/style.20170412.css">
+  <link rel="stylesheet" href="http://blogsource7.hope13.com/css/style.20170415.css">
+  <!--<link rel="stylesheet" href="/css/style.20170415.css">-->
 </head>
 <script>
     var _hmt = _hmt || [];
@@ -46,11 +47,26 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
     })();
+</script>
+
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<!--<script src="//cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>-->
+<!--<script>AV.init("LY6CrzbR8USsGYYSD82uOWJk-gzGzoHsz", "Fw7JGNWmDJggNzcjOH6gi9CE");</script>-->
+<script>
+    AV.init(
+        {
+            appId: "LY6CrzbR8USsGYYSD82uOWJk-gzGzoHsz",
+            appKey: "Fw7JGNWmDJggNzcjOH6gi9CE"
+            // 启用美国节点
+            //region: 'us'
+        }
+    );
 </script></html>
 <body>
   <div id="container">
     <div class="left-col">
-    <div class="overlay"></div>
+      <div class="left-col-wrap">
+          <div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -121,8 +137,6 @@
 				        
 							<li><a href="/music/">音乐</a></li>
 				        
-							<li><a href="/instagram/">照片</a></li>
-				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -167,6 +181,7 @@
 		</div>
 	</header>				
 </div>
+      </div>
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
@@ -196,8 +211,6 @@
 		        
 					<li><a href="/music/">音乐</a></li>
 		        
-					<li><a href="/instagram/">照片</a></li>
-		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -216,36 +229,37 @@
 	</div>
 </nav>
       <div class="body-wrap"><article id="post-instagram" class="article article-type-post" itemscope itemprop="blogPost">
-  
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        <h1 class="article-title" itemprop="name">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">
       相册
     </h1>
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
+        
+        <div class="article-info article-info-post">
+            
+            
+            <div class="clearfix"></div>
+        </div>
         
         
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><div class="instagram" data-client-id="956dd096b6e5496aba6662165b9b8443" data-user-id="438522285"><br>    <a href="http://instagram.com/litten225" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a><br></div></p>
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><div class="instagram" data-client-id="956dd096b6e5496aba6662165b9b8443" data-user-id="438522285"><br>    <a href="http://instagram.com/litten225" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a><br></div></p>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="/js/jquery.lazyload.js"></script>
 <script src="/js/instagram.js"></script>
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
-  
+    
+    
 </article>
 
 <div class="article-footer">
@@ -283,5 +297,101 @@
 </script>
 <script src="http://blogsource7.hope13.com/js/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script src="http://blogsource7.hope13.com/js/main.js"></script>
+
+
+
+
+
+
+
+<!--page counter part-->
+<script>
+    function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        articleKey = $('.article.article-type-post').attr('id')
+        //console.log(url);
+        //console.log(title);
+        //console.log(articleKey)
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){//console.log(results)
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.save(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("key",articleKey);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                            //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                            //alert('Failed to create');
+                        }
+                    });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                //alert('Error:'+error.code+" "+error.message);
+            }
+        });
+    }
+    $(function(){
+        var Counter=AV.Object.extend("blogCounter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+            addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10);
+        query.find({
+                success: function(results){
+
+                    var resObg = {};
+
+                    if(results.length > 0){
+                        results.forEach(function (counter) {
+                            resObg[counter.get("key")] = counter.get("time");
+                        })
+                    }
+
+                    //console.log(resObg)
+                    $('.reading-number').each(function (index,ele) {
+                        var $ele = $(ele),
+                            key = $ele.data('key');
+                        $ele.html(resObg[key]);
+                    })
+                    /*for(var i=0;i<results.length;i++)
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }*/
+                },
+                error: function(error){
+                    //alert("Error:"+error.code+" "+error.message);
+                }
+            }
+        )
+    });
+</script>
   </div>
 </body>

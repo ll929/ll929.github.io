@@ -23,7 +23,8 @@
   
     <link rel="icon" href="http://blogsource7.hope13.com/image/user.jpg">
   
-  <link rel="stylesheet" href="http://blogsource7.hope13.com/css/style.20170412.css">
+  <link rel="stylesheet" href="http://blogsource7.hope13.com/css/style.20170415.css">
+  <!--<link rel="stylesheet" href="/css/style.20170415.css">-->
 </head>
 <script>
     var _hmt = _hmt || [];
@@ -47,11 +48,26 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
     })();
+</script>
+
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<!--<script src="//cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>-->
+<!--<script>AV.init("LY6CrzbR8USsGYYSD82uOWJk-gzGzoHsz", "Fw7JGNWmDJggNzcjOH6gi9CE");</script>-->
+<script>
+    AV.init(
+        {
+            appId: "LY6CrzbR8USsGYYSD82uOWJk-gzGzoHsz",
+            appKey: "Fw7JGNWmDJggNzcjOH6gi9CE"
+            // 启用美国节点
+            //region: 'us'
+        }
+    );
 </script></html>
 <body>
   <div id="container">
     <div class="left-col">
-    <div class="overlay"></div>
+      <div class="left-col-wrap">
+          <div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -122,8 +138,6 @@
 				        
 							<li><a href="/music/">音乐</a></li>
 				        
-							<li><a href="/instagram/">照片</a></li>
-				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -168,6 +182,7 @@
 		</div>
 	</header>				
 </div>
+      </div>
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
@@ -197,8 +212,6 @@
 		        
 					<li><a href="/music/">音乐</a></li>
 		        
-					<li><a href="/instagram/">照片</a></li>
-		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -217,47 +230,48 @@
 	</div>
 </nav>
       <div class="body-wrap"><article id="post-千里之行，始于足下" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/04/25/千里之行，始于足下/" class="article-date">
+        <span class="reading-number" data-key="post-千里之行，始于足下"></span>
+        <a href="/2016/04/25/千里之行，始于足下/" class="article-date">
   	<time datetime="2016-04-25T08:35:41.000Z" itemprop="datePublished">2016-04-25</time>
 </a>
     </div>
-  
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        <h1 class="article-title" itemprop="name">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">
       千里之行，始于足下
     </h1>
-      </header>
-      
-      <div class="article-info article-info-post">
-        <div class="article-tag tagcloud">
+        </header>
+        
+        <div class="article-info article-info-post">
+            <div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
 	</div>
-        <div class="article-category tagcloud">
+            <div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/心情随笔/">心情随笔</a>
 	</div>
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <blockquote>
 <p>合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。——老子·《道德经》·第六十四章<a id="more"></a></p>
 </blockquote>
 <p>&#160; &#160; &#160; &#160;经过了两天的摸索，成功用hexo在github上搭建了一个博客。这些天一直在做百度ife的任务，对于我这样一个算是刚入门的技术小白来说，完成任务是次要的，重要的是在写代码过程中的学习与反思，所以就搭建了这么一个博客，让它来作为我技术的沉淀以及和大家分享学习心得的工具。</p>
 <p>&#160; &#160; &#160; &#160;第一次做网页是在一年前，那时候连切图是什么都不知道，更别说前端这么一个高大上的名字了，一点html、js都不会写，当时只知道DW可以做网页。记得当时直接用的DW的可视化界面，直接插入图片，一行代码都没有写，全是自动生成的。当时还需要一个查询订单功能，这肯定就涉及到了后端，连前端都不懂的我怎么会懂后端。但是万能的百度和google帮了我，DW上可以直接用上面自带的函数生成asp页面，然后连接access数据库，虽然也可以自动生成其他的后端语言，但无疑asp+access这样的10年前的技术是最简单的，也是我这种一行代码都写不出来的人最容易操作的。过了好几天，最后一个巨丑无比的网站出现了，虽然丑，但是当我把它传到空间上，在浏览器上用域名访问成功的那一刻，内心是无比的激动。也就是在这次做网站的过程中，我接触到了前端这个词，从此便爱上了它。</p>
 <p>&#160; &#160; &#160; &#160;后来发现慕课网和极客学院是个好地方，在上面学了几个月的时间的前端，感觉算是勉强入门了。后来我觉得看视频是一个比较被动的过程，还好在学校图书馆的书比较全，看书时间比较自由，也没有什么其他限制，而且书里面要比视频讲的深。再后来，也就是今年春季开学，发现了百度ife这么一个地方，第一感觉就是相见恨晚，里面的任务涉及到的技术比较全面，做任务写代码的的过程就是一个自身技术提升的过程。</p>
 <p>&#160; &#160; &#160; &#160;文笔有限，就写这么多了。其实做任何事都一样，从小事做起，持之以恒，终有一天会成功。</p>
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     <nav id="article-nav">
   
   
@@ -267,30 +281,17 @@
     </a>
   
 </nav>
-  
+    
+    
+    <div class="article-dashang">
+    <!-- 代码1：放在页面需要展示的位置  -->
+    <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+    <div style="text-align: center;margin-bottom: 20px" id="cyReward" role="cylabs" data-use="reward"></div>
+</div>
+    
 </article>
 
 <div class="article-footer">
-    
-    <div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
-        <a class="jiathis_button_qzone"></a>
-        <a class="jiathis_button_tsina"></a>
-        <a class="jiathis_button_tqq"></a>
-        <a class="jiathis_button_weixin"></a>
-        <a class="jiathis_button_cqq"></a>
-        <a class="jiathis_button_copy"></a>
-        <a href="http://www.jiathis.com/share?uid=2096944" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-        <a class="jiathis_counter_style"></a>
-    </div>
-    <script type="text/javascript">
-        var jiathis_config = {data_track_clickback:'true'};
-    </script>
-    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2096944" charset="utf-8"></script>
-    <!-- JiaThis Button END -->
-</div>
     
 
     
@@ -333,6 +334,13 @@
                 });
             }
         })(); </script>
+
+
+    <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
+    <!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
+    <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+    <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysWpWNsH"></script>
 </div>
     
 
@@ -364,5 +372,101 @@
 </script>
 <script src="http://blogsource7.hope13.com/js/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script src="http://blogsource7.hope13.com/js/main.js"></script>
+
+
+
+
+
+
+
+<!--page counter part-->
+<script>
+    function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        articleKey = $('.article.article-type-post').attr('id')
+        //console.log(url);
+        //console.log(title);
+        //console.log(articleKey)
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){//console.log(results)
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.save(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("key",articleKey);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                            //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                            //alert('Failed to create');
+                        }
+                    });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                //alert('Error:'+error.code+" "+error.message);
+            }
+        });
+    }
+    $(function(){
+        var Counter=AV.Object.extend("blogCounter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+            addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10);
+        query.find({
+                success: function(results){
+
+                    var resObg = {};
+
+                    if(results.length > 0){
+                        results.forEach(function (counter) {
+                            resObg[counter.get("key")] = counter.get("time");
+                        })
+                    }
+
+                    //console.log(resObg)
+                    $('.reading-number').each(function (index,ele) {
+                        var $ele = $(ele),
+                            key = $ele.data('key');
+                        $ele.html(resObg[key]);
+                    })
+                    /*for(var i=0;i<results.length;i++)
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }*/
+                },
+                error: function(error){
+                    //alert("Error:"+error.code+" "+error.message);
+                }
+            }
+        )
+    });
+</script>
   </div>
 </body>
