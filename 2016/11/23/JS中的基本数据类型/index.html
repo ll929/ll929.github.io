@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>千里之行，始于足下 | 前端Geek</title>
+  <title>JS中的基本数据类型 | 前端Geek</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-  <meta name="description" content="合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。——老子·《道德经》·第六十四章">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;今天中午面试了百度的前端实习生职位，对其中的一个问题印象比较深刻。面试官问js中的基本数据类型有几种，想都没想回答5种：Undefined、Null、Boolean、Number、String。面试官让我再想想还有没有其他的，绞尽脑汁也没想出来，非常清楚的记得是5种。">
+<meta name="keywords" content="ES6,Javascript,Symbol">
 <meta property="og:type" content="article">
-<meta property="og:title" content="千里之行，始于足下">
-<meta property="og:url" content="http://www.fegeek.me/2016/04/25/千里之行，始于足下/index.html">
+<meta property="og:title" content="JS中的基本数据类型">
+<meta property="og:url" content="http://www.fegeek.me/2016/11/23/JS中的基本数据类型/index.html">
 <meta property="og:site_name" content="前端Geek">
-<meta property="og:description" content="合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。——老子·《道德经》·第六十四章">
-<meta property="og:updated_time" content="2017-04-11T12:19:16.000Z">
+<meta property="og:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;今天中午面试了百度的前端实习生职位，对其中的一个问题印象比较深刻。面试官问js中的基本数据类型有几种，想都没想回答5种：Undefined、Null、Boolean、Number、String。面试官让我再想想还有没有其他的，绞尽脑汁也没想出来，非常清楚的记得是5种。">
+<meta property="og:updated_time" content="2017-04-21T10:22:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="千里之行，始于足下">
-<meta name="twitter:description" content="合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。——老子·《道德经》·第六十四章">
+<meta name="twitter:title" content="JS中的基本数据类型">
+<meta name="twitter:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;今天中午面试了百度的前端实习生职位，对其中的一个问题印象比较深刻。面试官问js中的基本数据类型有几种，想都没想回答5种：Undefined、Null、Boolean、Number、String。面试官让我再想想还有没有其他的，绞尽脑汁也没想出来，非常清楚的记得是5种。">
   
     <link rel="alternative" href="/atom.xml" title="前端Geek" type="application/atom+xml">
   
@@ -229,12 +229,12 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-千里之行，始于足下" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS中的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
-        <span class="reading-number" data-key="post-千里之行，始于足下"></span>
-        <a href="/2016/04/25/千里之行，始于足下/" class="article-date">
-  	<time datetime="2016-04-25T08:35:41.000Z" itemprop="datePublished">2016-04-25</time>
+        <span class="reading-number" data-key="post-JS中的基本数据类型"></span>
+        <a href="/2016/11/23/JS中的基本数据类型/" class="article-date">
+  	<time datetime="2016-11-23T12:10:13.000Z" itemprop="datePublished">2016-11-23</time>
 </a>
     </div>
     
@@ -243,13 +243,13 @@
         
         <header class="article-header">
             <h1 class="article-title" itemprop="name">
-      千里之行，始于足下
+      JS中的基本数据类型
     </h1>
         </header>
         
         <div class="article-info article-info-post">
             <div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Symbol/">Symbol</a></li></ul>
 	</div>
             <div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/心情随笔/">心情随笔</a>
@@ -260,13 +260,9 @@
         
         <div class="article-entry" itemprop="articleBody">
             
-            <blockquote>
-<p>合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。——老子·《道德经》·第六十四章<a id="more"></a></p>
-</blockquote>
-<p>&#160; &#160; &#160; &#160;经过了两天的摸索，成功用hexo在github上搭建了一个博客。这些天一直在做百度ife的任务，对于我这样一个算是刚入门的技术小白来说，完成任务是次要的，重要的是在写代码过程中的学习与反思，所以就搭建了这么一个博客，让它来作为我技术的沉淀以及和大家分享学习心得的工具。</p>
-<p>&#160; &#160; &#160; &#160;第一次做网页是在一年前，那时候连切图是什么都不知道，更别说前端这么一个高大上的名字了，一点html、js都不会写，当时只知道DW可以做网页。记得当时直接用的DW的可视化界面，直接插入图片，一行代码都没有写，全是自动生成的。当时还需要一个查询订单功能，这肯定就涉及到了后端，连前端都不懂的我怎么会懂后端。但是万能的百度和google帮了我，DW上可以直接用上面自带的函数生成asp页面，然后连接access数据库，虽然也可以自动生成其他的后端语言，但无疑asp+access这样的10年前的技术是最简单的，也是我这种一行代码都写不出来的人最容易操作的。过了好几天，最后一个巨丑无比的网站出现了，虽然丑，但是当我把它传到空间上，在浏览器上用域名访问成功的那一刻，内心是无比的激动。也就是在这次做网站的过程中，我接触到了前端这个词，从此便爱上了它。</p>
-<p>&#160; &#160; &#160; &#160;后来发现慕课网和极客学院是个好地方，在上面学了几个月的时间的前端，感觉算是勉强入门了。后来我觉得看视频是一个比较被动的过程，还好在学校图书馆的书比较全，看书时间比较自由，也没有什么其他限制，而且书里面要比视频讲的深。再后来，也就是今年春季开学，发现了百度ife这么一个地方，第一感觉就是相见恨晚，里面的任务涉及到的技术比较全面，做任务写代码的的过程就是一个自身技术提升的过程。</p>
-<p>&#160; &#160; &#160; &#160;文笔有限，就写这么多了。其实做任何事都一样，从小事做起，持之以恒，终有一天会成功。</p>
+            <p>&#160; &#160; &#160; &#160;今天中午面试了百度的前端实习生职位，对其中的一个问题印象比较深刻。面试官问js中的基本数据类型有几种，想都没想回答5种：Undefined、Null、Boolean、Number、String。面试官让我再想想还有没有其他的，绞尽脑汁也没想出来，非常清楚的记得是5种。<a id="more"></a>最后面试官给出了我答案：6种，还有Symbol，是ES6中新引进的基本数据类型。<br>&#160; &#160; &#160; &#160;Symbol有什么用呢？看了阮一峰老师的《ECMAScript 6 入门》，对其有了一个大致的了解。Symbol表示一个独一无二的值，可以用作对象的属性名，这样对象的属性名就永远不会冲突。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>();</div><div class="line"></div><div class="line"><span class="keyword">typeof</span> s</div><div class="line"><span class="comment">// "symbol"</span></div></pre></td></tr></table></figure></p>
+<p>上面的代码中s就是一个独一无二的值。<br>Symbol函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述。该参数可以在控制台打印或者转为字符串时比较容易区分。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</div><div class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">'bar'</span>);</div><div class="line"></div><div class="line">s1 <span class="comment">// Symbol(foo)</span></div><div class="line">s2 <span class="comment">// Symbol(bar)</span></div><div class="line"></div><div class="line">s1.toString() <span class="comment">// "Symbol(foo)"</span></div><div class="line">s2.toString() <span class="comment">// "Symbol(bar)"</span></div></pre></td></tr></table></figure></p>
+<p>Symbol函数的参数只是表示对当前Symbol值的描述，相同参数的Symbol函数的返回值是不相等的。</p>
             
         </div>
         
@@ -274,11 +270,15 @@
     
     <nav id="article-nav">
   
-  
-    <a href="/2016/04/25/关于li标签内目录布局（中间省略号，两边文字居两端）的一点想法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于li标签内目录布局的一点想法</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2016/04/25/关于li标签内目录布局（中间省略号，两边文字居两端）的一点想法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"></strong>
+      <div class="article-nav-title">
+        
+          关于li标签内目录布局的一点想法
+        
+      </div>
     </a>
+  
   
 </nav>
     
@@ -299,7 +299,7 @@
     
     <div class="changyan">
     <!--PC和WAP自适应版-->
-    <div id="SOHUCS" sid="千里之行，始于足下"></div>
+    <div id="SOHUCS" sid="JS中的基本数据类型"></div>
     <script type="text/javascript">
         (function () {
             var appid = 'cysWpWNsH';
